@@ -11,3 +11,4 @@ describe('Display', () => {
         expect(wrapper.text()).toEqual('test');
     });
 });
+

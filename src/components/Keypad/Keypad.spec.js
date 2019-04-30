@@ -20,3 +20,4 @@ describe('Keypad', () => {
         expect(wrapper.find('div').length).toEqual(1);
     });
 });
+

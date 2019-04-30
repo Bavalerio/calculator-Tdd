@@ -21,3 +21,4 @@ describe('Calculator', () => {
         ])).toEqual(true);
       });
 });
+
