@@ -10,6 +10,7 @@ const Key = ({keyAction, keyType, keyValue }) => (
     </div>
 );
 
+
 Key.propTypes = {
     keyAction: PropTypes.func.isRequired,
     keyType: PropTypes.func.isRequired,
