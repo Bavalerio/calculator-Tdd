@@ -21,8 +21,8 @@ class Calculator extends Component {
 
         //stored value to use for math operation
         storedValue: '',
-    }
-
+    }  
+    
     callOperator = () => {
         console.log('call operation');
     }
@@ -54,5 +54,31 @@ class Calculator extends Component {
         );
     }
 }
+
+    class Calculadora extends Component {
+        
+        updateDisplay = value => {
+        let {displayValue} = this.state;
+
+        //prevent multiple ocurrence of '.'
+        if (value === '.' && displayValue.includes('.')) value = '.';
+    
+        if (value === 'ce' ) {
+        // deletes last char displayValue
+        displayValue = displayValue.substr(displayValue.length -1);
+        //set displayValue to '0' if displayValue is empty string
+        if (displayValue === '') displayValue = '0';
+        }else{
+        //replace displayValue with value if displayValue equal to '0'
+        //else concatenate displayValue and value
+        displayValue === '0' ? displayValue =value : displayValue += value;
+        }
+        this.setState({ displayValue });
+    }
+}
+
+
+
+
 
 export default Calculator;
