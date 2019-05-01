@@ -9,16 +9,16 @@ class Calculator extends Component {
     state = {
         //value to be displayed in <Display />
         displayValue: '0',
-        
+
         //values to be displayed in number <Keys />
-        numbers: [],
+        numbers: ['9','8','7','6','5','4','3','2','1','0','ce'],
 
         //values to be displayed in operator <Keys />
-        operators: [],
+        operators: ['/','x','-','+'],
 
         //operator select for math operation
         selectedOperator: '',
-        
+
         //stored value to use for math operation
         storedValue: '',
     }
@@ -38,12 +38,12 @@ class Calculator extends Component {
     render = () => {
         //unpack the component state by using Object Destructuring
         const { displayValue, numbers, operators } = this.state;
-        
-        
+
+
         return (
             <div className="calculator-container">
                 <Display displayValue={displayValue} />
-                <Keypad 
+                <Keypad
                     callOperator={this.callOperator}
                     numbers={numbers}
                     operators={operators}
@@ -52,7 +52,7 @@ class Calculator extends Component {
                 />
             </div>
         );
-    } 
+    }
 }
-     
+
 export default Calculator;

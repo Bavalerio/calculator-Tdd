@@ -7,7 +7,7 @@ import Keypad from '../Keypad/Keypad';
 describe('Calculator', () => {
     let wrapper;
     beforeEach(() => wrapper = shallow(<Calculator/>));
-    it('should render correctly', () => expect(wrapper).toMatchSnapshot());
+    
     it('should render the Display and Keypad Components', () => {
         expect(wrapper.containsAllMatchingElements([
           <Display displayValue={wrapper.instance().state.displayValue} />,
@@ -20,5 +20,6 @@ describe('Calculator', () => {
           />
         ])).toEqual(true);
       });
+      it('should render correctly', () => expect(wrapper).toMatchSnapshot());
 });
 
