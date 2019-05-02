@@ -13,11 +13,10 @@ const Key = ({keyAction, keyType, keyValue }) => (
     </div>
 );
 
-
 Key.propTypes = {
     keyAction: PropTypes.func.isRequired,
-    keyType: PropTypes.func.isRequired,
-    keyValue: PropTypes.func.isRequired,
+    keyType: PropTypes.string.isRequired,
+    keyValue: PropTypes.string.isRequired,
 }
 
 export default Key;
