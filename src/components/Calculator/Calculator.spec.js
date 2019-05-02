@@ -44,13 +44,13 @@ describe('mounted Calculator', () => {
       />
     ])).toEqual(true);
   });
-  it('should render correctly', () => expect(wrapper).toMatchSnapshot());
 });
 
 describe('updateDisplay', () => {
   let wrapper;
   beforeEach(() => wrapper = shallow(<Calculator />));
 
+  it('should render correctly', () => expect(wrapper).toMatchSnapshot());
   it('updates displayValue', () => {
     wrapper.instance().updateDisplay('5');
     expect(wrapper.state('displayValue')).toEqual('5');
